@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Based Skin Analysis</title>
+    <link rel="stylesheet" href="../static/realtime.css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="nav-items">
+        <div
+          id="homeTab"
+          class="nav-item"
+          onclick="window.location.href='/home'"
+        >
+          Home
+        </div>
+        <div id="realtimeTab" class="nav-item active">Realtime</div>
+        <div
+          id="symptomsTab"
+          class="nav-item"
+          onclick="window.location.href='/symptoms'"
+        >
+          Symptoms Based
+        </div>
+      </div>
+      <div class="logout-icon" id="logoutBtn" title="Logout">
+        <img
+          src="/static/images/power-buttons.png"
+          alt="Logout"
+          onclick="window.location.href = '/'"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Left Side: Video and Buttons -->
+      <div id="video-container">
+        <h1>AI-Based Skin Analysis System</h1>
+
+        <h2>Step 1: Capture Image</h2>
+        <video id="video" width="640" height="480" autoplay></video>
+        <canvas id="canvas" style="display: none"></canvas>
+
+        <img id="captured-image" style="display: none" />
+
+        <button id="capture">Capture Image</button>
+      </div>
+
+      <!-- Right Side: Analysis Results, Suggestions, and PDF -->
+      <div id="info-container">
+        <h2>Step 2: Analyze Skin</h2>
+        <button id="analyze">Analyze Skin</button>
+        <div id="results" class="hidden">
+          <h3>Analysis Results</h3>
+          <p><strong>Gender:</strong> <span id="gender"></span></p>
+          <p><strong>Age:</strong> <span id="age"></span></p>
+          <p><strong>Acne Type:</strong> <span id="acne"></span></p>
+          <button id="suggestions">Show Suggestions</button>
+
+          <!-- Suggestions container with scroll -->
+          <div id="suggestions-container" class="hidden"></div>
+        </div>
+
+        <button id="download">Download PDF Report</button>
+      </div>
+    </div>
+
+    <script src="../static/realtime.js"></script>
+  </body>
+</html>

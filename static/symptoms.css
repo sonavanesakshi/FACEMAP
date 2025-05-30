@@ -1,0 +1,241 @@
+/* Base styling */
+body {
+  background: url("/static/images/side_profile.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #292929;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.nav-items {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  margin: 0 16px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background-color: #00c6ff;
+  color: #1a1a1a;
+}
+
+h1 {
+  text-align: center;
+  color: #00c6ff;
+  margin-top: 20px;
+}
+
+/* Container styling */
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding-top: 26px;
+  /* background-color: #292929; */
+  /* background-color: rgba(41, 41, 41, 0.1); */
+  /* border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8); */
+}
+
+/* Tab buttons */
+.tab {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 12px 24px;
+  margin: 5px;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #00c6ff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Active tab indicator */
+.tab-btn.active {
+  background-color: #00c6ff;
+  color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+/* Button hover effect */
+.tab-btn:hover {
+  background-color: #00aaff;
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+  padding: 20px;
+  /* background-color: #1e1e1e; */
+  background-color: rgba(30, 30, 30, 0.9);
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow-y: auto;
+  max-height: 480px;
+}
+
+/* Active tab content */
+.tab-content.active {
+  display: block;
+}
+
+/* Textarea styling */
+textarea {
+  /* width: 100%; */
+  width: calc(100% - 24px);
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  /* background-color: #333; */
+  background-color: rgba(51, 51, 51, 0.1);
+  color: #f5f5f5;
+  border: 1px solid #555;
+
+  resize: none;
+  /* Prevent horizontal scroll */
+  overflow-x: hidden;
+}
+
+/* Result containers */
+#symptomResult,
+#imageResult {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  border: 1px solid #444;
+
+  /* max-height: 300px;
+    overflow-y: auto; */
+  /* Scrollable only within results */
+}
+
+/* Upload image preview */
+.image-preview-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+#uploadedImage {
+  /* max-width: 100%; */
+  max-width: 300px;
+  height: auto;
+  border: 2px solid #00c6ff;
+  border-radius: 8px;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.result-container {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+
+  /* max-height: 300px;
+    overflow-y: auto; */
+}
+
+button {
+  padding: 12px 20px;
+  margin-top: 10px;
+  background-color: #00c6ff;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00aaff;
+}
+
+.symptom-list {
+  margin-top: 10px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.symptom-item {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  margin: 5px;
+  border: 1px solid #00c6ff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.symptom-item:hover {
+  background-color: #00c6ff;
+  color: #1a1a1a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+.logout-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin-right: 20px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.logout-icon img {
+  width: 26px;
+  height: 26px;
+}

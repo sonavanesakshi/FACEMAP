@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Prediction Type</title>
+    <link rel="stylesheet" href="../static/home.css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="nav-items">
+        <div id="homeTab" class="nav-item active">Home</div>
+        <div id="realtimeTab" class="nav-item">Realtime</div>
+        <div id="symptomsTab" class="nav-item">Symptoms Based</div>
+      </div>
+      <div class="logout-icon" id="logoutBtn" title="Logout">
+        <img src="/static/images/power-buttons.png" alt="Logout" />
+      </div>
+    </div>
+    <!-- <div class="container">
+      <h1>Select Prediction Type</h1>
+      <div class="options">
+        <a href="/realtime" class="option">Realtime</a>
+        <a href="/symptoms" class="option">Symptoms Based</a>
+      </div>
+    </div> -->
+    <div class="container">
+      <h1>Welcome to AI-Based Skin Analysis System</h1>
+      <p class="intro-text">
+        Discover your skin health by analyzing images or using symptom-based
+        predictions. Get accurate results and personalized skincare suggestions.
+      </p>
+
+      <!-- Acne Types Section -->
+      <section class="info-section">
+        <h2>🔎 Acne Types</h2>
+        <div class="card-container">
+          <div class="card">
+            <h3>Blackheads</h3>
+            <p>Small, dark spots due to clogged pores.</p>
+          </div>
+          <div class="card">
+            <h3>Whiteheads</h3>
+            <p>Closed clogged pores that form small bumps.</p>
+          </div>
+          <div class="card">
+            <h3>Papules</h3>
+            <p>Small red bumps caused by inflammation.</p>
+          </div>
+          <div class="card">
+            <h3>Pustules</h3>
+            <p>Red bumps filled with pus, often painful.</p>
+          </div>
+          <div class="card">
+            <h3>Nodules</h3>
+            <p>Hard, painful lumps deep under the skin.</p>
+          </div>
+          <div class="card">
+            <h3>Cysts</h3>
+            <p>Large, pus-filled lumps causing scarring.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Benefits Section -->
+      <section class="info-section">
+        <h2>🚀 Why Use AI for Skin Analysis?</h2>
+        <div class="benefits">
+          <div class="benefit-item">
+            <h3>✅ Accurate Predictions</h3>
+            <p>
+              AI-based analysis ensures high precision and detection of acne
+              types.
+            </p>
+          </div>
+          <div class="benefit-item">
+            <h3>💡 Personalized Recommendations</h3>
+            <p>Tailored skincare tips based on individual analysis.</p>
+          </div>
+          <div class="benefit-item">
+            <h3>⚡ Faster Results</h3>
+            <p>Get results instantly with minimal waiting time.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="info-section">
+        <h2>📚 How It Works</h2>
+        <div class="how-it-works">
+          <div class="step">
+            <h3>Step 1</h3>
+            <p>
+              Choose either <strong>Realtime Analysis</strong> or
+              <strong>Symptom-Based Prediction</strong>.
+            </p>
+          </div>
+          <div class="step">
+            <h3>Step 2</h3>
+            <p>Upload your image or enter symptoms for analysis.</p>
+          </div>
+          <div class="step">
+            <h3>Step 3</h3>
+            <p>Receive instant analysis and tailored skincare suggestions.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script>
+      document
+        .getElementById("realtimeTab")
+        .addEventListener("click", () => (window.location.href = "/realtime"));
+      document
+        .getElementById("symptomsTab")
+        .addEventListener("click", () => (window.location.href = "/symptoms"));
+      document
+        .getElementById("logoutBtn")
+        .addEventListener("click", () => (window.location.href = "/"));
+    </script>
+  </body>
+</html>

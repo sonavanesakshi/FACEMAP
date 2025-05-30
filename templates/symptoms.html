@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../static/symptoms.css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="nav-items">
+        <div id="homeTab" class="nav-item" onclick="window.location.href='/home'">Home</div>
+        <div id="realtimeTab" class="nav-item" onclick="window.location.href='/realtime'">Realtime</div>
+        <div id="symptomsTab" class="nav-item active">Symptoms Based</div>
+      </div>
+      <div class="logout-icon" id="logoutBtn" title="Logout">
+        <img src="/static/images/power-buttons.png" alt="Logout" onclick="window.location.href = '/'" />
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- <h1>AI-Based Acne Type Prediction</h1> -->
+      <div class="tab">
+        <button
+          id="symptomsBtn"
+          class="tab-btn active"
+          onclick="showTab('symptoms')"
+        >
+          Use Symptoms
+        </button>
+        <button id="uploadBtn" class="tab-btn" onclick="showTab('upload')">
+          Upload Image
+        </button>
+      </div>
+
+      <div id="symptoms" class="tab-content" style="display: block">
+        <h2>Enter Your Symptoms</h2>
+        <textarea
+          id="symptomInput"
+          rows="5"
+          placeholder="Enter symptoms separated by commas... (eg. oily skin)"
+        ></textarea>
+        <button onclick="predictSymptoms()">Predict Based on Symptoms</button>
+        <div id="symptomList" class="symptom-list"></div>
+        <div id="symptomResult"></div>
+      </div>
+
+      <div id="upload" class="tab-content" style="display: none">
+        <h2>Upload Acne Image</h2>
+        <input
+          type="file"
+          id="imageInput"
+          accept="image/*"
+          onchange="previewImage(event)"
+        />
+        <div id="imagePreview" class="image-preview-container"></div>
+        <button onclick="predictImage()">Predict from Image</button>
+        <div id="imageResult" class="result-container"></div>
+      </div>
+    </div>
+
+    <script src="../static/symptoms.js"></script>
+  </body>
+</html>
