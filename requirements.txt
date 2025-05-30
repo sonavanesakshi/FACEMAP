@@ -1,0 +1,7 @@
+flask
+opencv-python
+pandas
+fpdf
+mysql
+mysql-connector-python
+tensorflow
